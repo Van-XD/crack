@@ -20,7 +20,9 @@ try:
 
 	judul=pyfiglet.figlet_format('CRACK')	
 	
-	=pyfiglet.figlet_format('TEMAN')
+
+
+tem=pyfiglet.figlet_format('TEMAN')
 
 	pub=pyfiglet.figlet_format('PUBLIK')
 
