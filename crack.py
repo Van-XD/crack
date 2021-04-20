@@ -198,7 +198,7 @@ class nampung:
 		os.system('clear')
 		os.system('clear')
 		r=json.loads(req.get(f'https://graph.facebook.com/me?access_token={self.token}').text)
-		print(f'{judul}\n[   Hallo',r['name']+', WELLCOME TO MY SCRIPT   ]\n\n[1]. Crack daftar teman\n[2]. Crack daftar id publik\n[0]. Logout\n')
+		print(f'{judul}\n[By : VanzXD]\n[   Hello',r['name']+', WELLCOME TO MY SCRIPT   ]\n\n[1]. Crack daftar teman\n[2]. Crack daftar id publik\n[0]. Logout\n')
 		while True:
 			p=input('[?] Pilih yang mana : ')
 			if p in ('01','1'):self.sendTeman()
