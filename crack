@@ -18,7 +18,9 @@ idTeman,idPublik=[],[]
 
 try:
 
-	judul=pyfiglet.figlet_format('CRACK')	tem=pyfiglet.figlet_format('TEMAN')
+	judul=pyfiglet.figlet_format('CRACK')	
+	
+	=pyfiglet.figlet_format('TEMAN')
 
 	pub=pyfiglet.figlet_format('PUBLIK')
 
