@@ -10,7 +10,7 @@
 
 # pip install bs4
 
-# git clone https://github.com/vanz-xd/crack.git
+# git clone https://github.com/vanz-xd/crack
 
 # cd heker
 
