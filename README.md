@@ -1,5 +1,5 @@
 <h1 align="center">
-  YMBF
+  CRACK
 </h1>
 </div>
 <p align="center">
@@ -19,14 +19,14 @@
 $ pkg update && pkg upgrade
 $ pkg install python2
 $ pkg install git
-$ git clone https://github.com/Yayan-XD/ymbf
+$ git clone https://github.com/Van-XD/crack
 $ pip2 install requests bs4
 $ pip2 install futures
 ```
 #### Run script
 ```bash
-$ cd ymbf
-$ python2 ymbf.py
+$ cd crack
+$ python2 crack.py
 ```
 #### MY SOCIAL MEDIA
 
